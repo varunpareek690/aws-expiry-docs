@@ -51,12 +51,12 @@ const App = () => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const docResponse = await fetch('https://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/documents');
+      const docResponse = await fetch('http://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/documents');
       if (docResponse.ok) {
         const docData = await docResponse.json();
         setDocuments(docData);
       }
-      const reminderResponse = await fetch('https://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/reminders');
+      const reminderResponse = await fetch('http://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/reminders');
       if (reminderResponse.ok) {
         const reminderData = await reminderResponse.json();
         setNotifications(reminderData);

@@ -50,7 +50,7 @@ const AnimatedUploadArea = ({ onUploadComplete }) => {
       const formData = new FormData();
       formData.append('file', file);
       
-      const response = await fetch('https://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/upload', {
+      const response = await fetch('http://ec2-13-233-110-60.ap-south-1.compute.amazonaws.com:5000/upload', {
         method: 'POST',
         body: formData,
       });
